@@ -4,18 +4,16 @@ namespace Modules;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
-use Modules\User\src\Commands\TestCommand;
-use Modules\User\src\Http\Middlewares\DemoMiddleware;
 use Modules\User\src\Repositories\UserRepository;
 
 class ModuleServiceProvider extends ServiceProvider
 {
     private $middlewares = [
-        'demo' => DemoMiddleware::class,
+
     ];
 
     private $commands = [
-        TestCommand::class,
+
     ];
 
     public function boot()
@@ -46,9 +44,9 @@ class ModuleServiceProvider extends ServiceProvider
         $this->commands($this->commands);
 
         //Repository
-        $this->app->singleton(
-            UserRepository::class
-        );
+        //        $this->app->singleton(
+        //            UserRepository::class
+        //        );
     }
 
     private function getModules()
