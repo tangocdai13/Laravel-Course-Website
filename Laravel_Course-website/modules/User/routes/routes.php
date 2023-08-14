@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\User\src\Http\Controllers\UserController;
 
-//Module Users
-Route::group(['namespace' => 'Modules\User\src\Http\Controllers\UserController'], function () {
-    Route::prefix('users')->group(function () {
-        Route::get('/', [UserController::class, 'index']);
+Route::group(['namespace' => 'Modules\User\src\Http\Controllers'], function () {
+    Route::prefix('admin')->as('admin.')->group(function () {
+        Route::prefix('users')->as('users.')->group(function () {
+            Route::get('/', 'UserController@index')->name('index');
+            Route::get('/create', 'UserController@create')->name('create');
+        });
     });
 });

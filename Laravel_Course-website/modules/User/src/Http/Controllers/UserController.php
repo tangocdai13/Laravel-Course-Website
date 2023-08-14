@@ -3,22 +3,20 @@
 namespace Modules\User\src\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Modules\User\src\Repositories\UserRepository;
 
 class UserController extends Controller
 {
-    protected $userRepo;
-
-    public function __construct(UserRepository $userRepo)
-    {
-        $this->userRepo = $userRepo;
-    }
-
     public function index()
     {
-        $users = $this->userRepo->getUsers(1);
-        dd($users);
+        return view('user::lists', [
+            'pageTitle' => 'Quản lý người dùng',
+        ]);
+    }
 
-        return view('user::list');
+    public function create()
+    {
+        return view('user::add', [
+            'pageTitle' => 'Thêm người dùng',
+        ]);
     }
 }
