@@ -1,0 +1,11 @@
+<?php
+
+namespace Modules\{module}\src\Repositories;
+
+use App\Repositories\RepositoryInterface;
+
+interface {module}RepositoryInterface extends RepositoryInterface
+{
+    //Lấy danh sách người dùng
+    public function get{module}s();
+}
