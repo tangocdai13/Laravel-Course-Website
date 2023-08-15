@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/morris/morris.css') }}">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-
+     alpha/css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,6 +44,12 @@
 <script src="{{ asset('backend/assets/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
 <script src="{{ asset('backend/assets/js/script.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </body>
 
 </html>
